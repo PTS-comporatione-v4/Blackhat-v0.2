@@ -4,14 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CICADA 6845 // test 05</title>
-<!--
-  CICADA 6845 — TEST 05 (FÁZA 2, variant A).
-  cesta A (pravá): morse timing → "vidiaci slepy"; fragmenty 5.1–5.4.
-  cesta B (pasca): morse timing → "ziadna nahoda"; 2-znakový mini kúsok.
-  Kódovanie overené na cryptii.com 7.10.2026 (English, Timing, signal on *, signal off .).
-  Odpoveď = CELÝ dekódovaný text (≤13 znakov).
-  CISLO_FAZY = 5.
--->
+<!-- CICADA 6845 — TEST 05. -->
 <style>
   body { background:#0a0a0a; color:#c8c8c8; font-family:Georgia,serif;
          max-width:640px; margin:8vh auto; padding:0 24px; line-height:1.7; }
@@ -50,7 +43,7 @@
   Len jedna cesta je pravá.
 </div>
 
-<!-- ================= CESTA A (pravá) ================= -->
+<!-- ================= CESTA A ================= -->
 <div class="cesta">
 <h2>CESTA A — prvý signál</h2>
 <div class="hadanka">
@@ -62,7 +55,7 @@
 <div class="vysledok" id="vyslA"></div>
 </div>
 
-<!-- ================= CESTA B (pasca) ================= -->
+<!-- ================= CESTA B ================= -->
 <div class="cesta">
 <h2>CESTA B — druhý signál</h2>
 <div class="hadanka">
@@ -81,13 +74,13 @@
 </p>
 
 <script>
-// SCHVÁLENÉ 7.10.2026 — hashe platia pre "vidiaci slepy" / "ziadna nahoda".
+// SCHVÁLENÉ 7.10.2026 — variant A.
 // CISLO_FAZY = 5 sa NESMIE meniť (je súčasťou hashov).
 const CISLO_FAZY = 5;
 const REALNA = "A";
 const KONTROLA_A = "10292f023d14d98655c1f2a06670cce29707f38426dd994498bcb0a6f59b561d";
 const KONTROLA_B = "a5326f4f4890dc3344fff1ad7362cc00409dab6bad621caa4299fae3ce161eea";
-const NEXT_URL = "https://github.com/PTS-comporatione-v4/6828147852369987456220147896214863258962001478965412001478945320";  // doplniť, až bude TEST 06.
+const NEXT_URL = "https://github.com/PTS-comporatione-v4/6828147852369987456220147896214863258962001478965412001478945320"; // TEST 06 — doplnené 14.10.2026 (zhodné s live verziou).
 
 function norm(s){
   return s.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
